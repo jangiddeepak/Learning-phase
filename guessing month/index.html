@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <center>
+        <h1>Month-Guess-Name </h1>
+        <br>
+        <h2 id="root"> </h2>
+        <br>
+        <button onclick="monthName()">Click me</button>
+     </center>
+    <script>
+        function monthName(){
+            let month=Math.floor(Math.random()*12+1)
+            switch(month){
+                case 1:
+                    root.innerHTML='January'
+                    break;
+                    
+                case 2:
+                    root.innerHTML='February'
+                    break;
+                case 3:
+                    root.innerHTML='March'
+                    break;
+                case 4:
+                    root.innerHTML='April'
+                    break;
+
+                case 5:
+                    root.innerHTML='May'
+                    break;
+                case 6:
+                    root.innerHTML='June'
+                    break;
+                case 7:
+                    root.innerHTML='July'
+                    break ;               
+                case 8:
+                    root.innerHTML='August'
+                    break;
+                case 9:
+                    root.innerHTML='September'
+                    break;
+                case 10:
+                    root.innerHTML='October'
+                    break;
+                case 11:
+                    root.innerHTML='Novemberr'
+                    break;
+                case 12:
+                    root.innerHTML='December'
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
