@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h2>Stop Watch</h2> <br>
+        <h4 id="display-time">00:00:00</h4>
+        <button id="start-btn" onclick="startTime()">Start</button>
+        <button id="stop-btn" onclick="stopClick()">Stop</button>
+        <button id="reset-btn"  onclick="resetTime()">reset</button>
+
+    </center>
+
+</body>
+<script>
+    let display_time = document.getElementById('display-time')
+    let minutes = 0;
+    let seconds = 0;
+    let milli = 0;
+    let stopTime = true;
+
+    function startTime() {
+        if (stopTime == true) {
+            stopTime = false;
+            timeRunning();
+
+        }
+    }
+    function timeRunning() {
+        minutes =parseInt(minutes);
+        seconds = parseInt(seconds);
+        milli = parseInt(milli);
+        if (stopTime == false) {
+            milli = milli + 1;
+            if (milli == 100) {
+                seconds = seconds + 1;
+                milli = 0;
+
+            }
+            if (seconds == 60) {
+                minutes = minutes + 1;
+                seconds = 0;
+            }
+            if(milli < 10){
+                milli = "0" + milli;
+            }
+            if(seconds < 10){
+                seconds = "0" + seconds;
+            }
+            if(minutes < 10){
+                minutes = "0"+ minutes;
+            }
+        }
+        display_time.innerHTML = minutes  + ":" +seconds +  ":" + milli
+               
+    }
+    function stopClick(){
+        if(stopTime == false ){
+            stopTime =true ;
+        }
+    }
+     function resetTime(){
+    
+        stopTime=true;
+        minutes =0;
+        seconds=0;
+        milli = 0;
+        display_time.innerHTML = "00:00:00"
+
+
+     }
+     setInterval(timeRunning,10)
+
+</script>
+
+</html>
