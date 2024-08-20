@@ -1,6 +1,10 @@
 import { Outlet, useRoutes } from "react-router-dom";
 import { Home } from "../pages/Home";
 import { Login } from "../pages/Login";
+import { UseStateHook } from "../hooks/UseStateHook"; 
+import { UseEffecteHook } from "../hooks/UseEffectHook";
+import path from "path";
+import { Regsiter } from "../pages/Register";
 
 let allPages = {
      path:'/',
@@ -13,6 +17,18 @@ let allPages = {
         {
             path:'login',
             element:<Login/>
+        },
+        {
+            path:'hooks',
+            element:
+            <> <UseStateHook/>
+            <UseEffecteHook/>
+            </>
+
+        },
+        {
+            path:'register',
+            element:<Regsiter/>
         }
      ]
 

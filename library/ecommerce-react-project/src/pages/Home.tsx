@@ -1,4 +1,6 @@
 import { Button } from "../components/Button"
+import { CardContainerApi } from "../components/cards/CardContainerApi"
+import { CardConttainer } from "../components/cards/CardConttainer"
 import { MuiButton } from "../components/mui/MuiButton"
 import { MyCarousal } from "../components/mycarousal/MyCarousal"
 import { MyNavbar } from "../components/mynavbar/MyNavbar"
@@ -12,6 +14,8 @@ export let Home = ()=>{
     <MuiButton/>
     <CustomCss/>
     <MyCarousal/>
+    <CardConttainer/>
+   <CardContainerApi/>
 
     </>
 
